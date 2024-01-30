@@ -1,32 +1,25 @@
-import React, { useState } from "react";
-import "./Admin.css";
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
   DatabaseOutlined,
+  DesktopOutlined,
   ShoppingCartOutlined,
-  DownOutlined,
+  UserOutlined
 } from "@ant-design/icons";
 import {
+  Avatar,
   Breadcrumb,
+  Flex,
+  Input,
   Layout,
   Menu,
-  theme,
-  Input,
-  Avatar,
-  Dropdown,
-  Space,
-  Flex,
+  theme
 } from "antd";
-import UserAdmin from "../components/admin/UserAdmin";
-import ProductAdmin from "../components/admin/ProductAdmin";
+import React, { useState } from "react";
+import AdminName from "../components/admin/AdminName";
 import Dashboard from "../components/admin/Dashboard";
 import OrderAdmin from "../components/admin/OrderAdmin";
-import HeaderAdmin from "../components/admin/AdminName";
-import AdminName from "../components/admin/AdminName";
+import ProductAdmin from "../components/admin/ProductAdmin";
+import UserAdmin from "../components/admin/UserAdmin";
+import "./Admin.css";
 const { Search } = Input;
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -48,7 +41,6 @@ const items = [
 const Admin = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [selection, setSelection] = useState(1);
-  console.log(selection);
   const {
     token: { colorBgContainer },
   } = theme.useToken();

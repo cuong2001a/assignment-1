@@ -20,12 +20,12 @@ const Routers = () => {
         <Route
           path="/admin"
           element={
-            // isAuthenticated &&
-            // JSON.parse(localStorage.getItem("user/admin"))?.role === "admin" ? (
+            isAuthenticated &&
+            JSON.parse(localStorage.getItem("user/admin"))?.role === "admin" ? (
             <Admin />
-            // ) : (
-            // <Navigate to="/login" />
-            // )
+            ) : (
+            <Navigate to="/login" />
+            )
           }
         />
         <Route

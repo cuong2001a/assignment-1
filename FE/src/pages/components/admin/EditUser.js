@@ -68,7 +68,7 @@ const EditUser = (id) => {
       }, []);
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button type='link' onClick={showModal}>
         Edit
       </Button>
       <Modal

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Space, Table, Button, Popconfirm, Form, Select, Input } from "antd";
+import { Space, Table, Button, Popconfirm, Form, Select, Input, Grid, Row, Col } from "antd";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import {} from "../../services";
@@ -180,31 +180,37 @@ const OrderAdmin = () => {
   return (
     <>
       <Form onFinish={onFinish}>
-        <Form.Item label="Filter by">
-          <Space.Compact>
-            <Form.Item name={["timeSet", "category"]} noStyle>
-              <Select placeholder="Select one">
-                <Option value="">All</Option>
-                <Option value="/order-day?day=">Day</Option>
-                <Option value="/order-month?month=">Month</Option>
-                <Option value="/order-year?year=">Year</Option>
-              </Select>
+        <Row gutter={[8,0]}>
+          <Col xs={24} md={4}>
+            <Form.Item label="Filter by">
+              <Space.Compact>
+                <Form.Item name={["timeSet", "category"]} noStyle>
+                  <Select placeholder="Select one">
+                    <Option value="">All</Option>
+                    <Option value="/order-day?day=">Day</Option>
+                    <Option value="/order-month?month=">Month</Option>
+                    <Option value="/order-year?year=">Year</Option>
+                  </Select>
+                </Form.Item>
+                <Form.Item name={["timeSet", "number"]} noStyle>
+                  <Input
+                    style={{
+                      width: "50%",
+                    }}
+                    placeholder="Input"
+                  />
+                </Form.Item>
+              </Space.Compact>
             </Form.Item>
-            <Form.Item name={["timeSet", "number"]} noStyle>
-              <Input
-                style={{
-                  width: "50%",
-                }}
-                placeholder="Input"
-              />
+          </Col>
+          <Col xs={24} md={1}>
+            <Form.Item colon={false}>
+              <Button type="primary" className="bg-[#1677ff] mb-2" htmlType="submit">
+                Submit
+              </Button>
             </Form.Item>
-          </Space.Compact>
-        </Form.Item>
-        <Form.Item label=" " colon={false}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
+          </Col>
+        </Row>
       </Form>
       {orders && (
         <Table

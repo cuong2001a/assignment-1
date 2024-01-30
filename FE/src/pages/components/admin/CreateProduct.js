@@ -63,7 +63,7 @@ const CreateProduct = () => {
   };
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button type="primary" className="bg-[#1677ff] mb-2" onClick={showModal}>
         Create a new product
       </Button>
       <Modal

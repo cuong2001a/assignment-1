@@ -111,7 +111,7 @@ const Header = () => {
               <div className="cursor-pointer  bg-[#545457] text-white px-3 py-2.5  rounded-sm">
                 <i className="fa-solid fa-magnifying-glass" />
               </div>
-              <ul>
+              <ul className="mx-2">
                 {name ? (
                   <>
                     {" "}

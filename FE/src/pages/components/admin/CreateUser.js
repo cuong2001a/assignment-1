@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import { Button, Modal,  Form,
-    Input,
-    InputNumber,  Select, } from 'antd';
 import { useToast } from "@chakra-ui/react";
-import { createProduct, createUser } from '../../services';
+import {
+  Button,
+  Form,
+  Input,
+  Modal,
+  Select
+} from 'antd';
+import React, { useState } from 'react';
+import { createUser } from '../../services';
 
 
 
@@ -56,7 +60,7 @@ const CreateUser = () => {
     }
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button type="primary" className="bg-[#1677ff] mb-2" onClick={showModal}>
         Create a new user
       </Button>
       <Modal
