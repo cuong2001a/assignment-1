@@ -151,7 +151,7 @@ const Header = () => {
               />
 
               <Link to="/">
-                <p className="text-3xl">Mind Clothing Store</p>
+                <p className="text-3xl font-bold">Mind Clothing Store</p>
               </Link>
 
               <div className="flex items-center gap-3">
@@ -237,7 +237,7 @@ const Header = () => {
             </li>
             <li className="cursor-pointer">
               <Link to="/">
-                <p className="text-3xl">Mind Clothing Store</p>
+                <p className="text-3xl font-bold">Mind Clothing Store</p>
               </Link>
             </li>
             <li className="cursor-pointer">

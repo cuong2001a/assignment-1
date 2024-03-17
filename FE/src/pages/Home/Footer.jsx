@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container grid lg:grid-cols-3 justify-between items-start">
           <div className="flex items-center justify-center">
             <Link to="/">
-              <p className="text-3xl text-white">Mind Clothing Store</p>
+              <p className="text-3xl text-white font-bold">Mind Clothing Store</p>
             </Link>
             {/* <ul>
               <li>

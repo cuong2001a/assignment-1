@@ -3,34 +3,34 @@
 }
 
 .sidebar {
-  width: 9%;
+  /* width: 20%; */
   padding: 25px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .sidebar h1 {
-  font-size: 30px;
   cursor: pointer;
+  text-align: left;
 }
 
 .sidebar li {
   font-size: 20px;
-  padding: 10px;
+  /* padding: 10px; */
+  padding-block: 10px;
+  padding-inline-end: 10px;
   color: #2c1313;
   cursor: pointer;
 }
 
 .product {
-  flex: 1;
+  /* width:80%; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 20px;
 }
 
 .containerz {
-  width: 25%;
   box-sizing: border-box;
   padding: 10px;
   margin: 10px;
@@ -45,7 +45,7 @@
 }
 
 .containerz img {
-  max-width: 60%;
+  width: 100%;
   height: auto;
 }
 
@@ -74,9 +74,6 @@
 .cart-icon:active {
   transform: scale(1.5);
 }
-.name {
-  visibility: hidden;
-}
 
 .price-math h4,
 .price-math del {
@@ -84,13 +81,7 @@
   box-sizing: border-box;
   padding: 0 5px;
   text-align: center;
-  font-size: 20px;
 }
-
-/* p {
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  } */
 
 h1 {
   text-align: center;
@@ -98,8 +89,6 @@ h1 {
 }
 
 .product p {
-  font-weight: bold;
-  margin-top: 5px;
   font-size: 20px;
 }
 
@@ -112,4 +101,9 @@ h4 {
 }
 .delete {
   text-decoration: line-through;
+}
+
+div.active li{
+  color: #45a049;
+  /* padding-left: 0; */
 }

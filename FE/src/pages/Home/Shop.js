@@ -47,8 +47,8 @@ const Shop = () => {
     <>
       <Header />
       <section className="shop-content">
-        <div className="sidebar">
-          <h1>Mind Clothing Store</h1>
+        <div className="sidebar w-[30%] md:w-[20%]">
+          <h1 className="text-xl md:text-3xl font-bold">Mind Clothing Store</h1>
           {categories &&
             categories.map((category) => (
               <div
@@ -56,26 +56,24 @@ const Shop = () => {
                 className={category.name === selectedCategory ? "active" : ""}
                 onClick={() => handleCategoryClick(category.name)}
               >
-                <li>{category.name}</li>
+                <li className="text-lg md:text-xl">{category.name}</li>
               </div>
             ))}
         </div>
-        <div className="product">
+        <div className="product justify-center md:justify-normal  w-[70%] md:w-[80%]">
           {products
             .filter(
               (data) =>
                 !selectedCategory || data.category.name === selectedCategory
             )
             .map((data) => (
-              <div className="containerz" key={data.id}>
-                <img src={data.thumbnail} alt="#" />
+              <div className="containerz w-[1/3] sm:w-[25%] md:w-[20%]" key={data.id}>
                 <Link to={`/detail/${data._id}`}>
-                  {" "}
-                  <p>{data.name}</p>
+                  <img src={data.thumbnail} alt="#" />
+                  <p className="line-clamp-2 md:text-[18px] text-sm">{data.name}</p>
                 </Link>
-                <p className="name">{data.category.name}</p>
-                <div className="price-math">
-                  <h4>
+                <div className="price-math flex flex-wrap">
+                  <h4 className="text-base md:text-lg">
                     {(data.priceDetail &&
                       formatNumber(
                         data.priceDetail.price *
@@ -85,7 +83,7 @@ const Shop = () => {
                     đ
                   </h4>
                   {data.priceDetail && (
-                    <del className="delete">{data.priceDetail.price}đ</del>
+                    <del className="delete text-base md:text-lg">{data.priceDetail.price}đ</del>
                   )}
                   {/* <span className="cart-icon">
                     <AiOutlineShoppingCart />
